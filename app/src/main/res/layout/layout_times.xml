@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginBottom="4dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTime"
+        style="@style/txt.h5.bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="00:00" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="-2dp"
+        android:background="?android:textColorHint" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDate"
+            style="@style/txt.h0.medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/sliding_date" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDay"
+            style="@style/txt.h0.medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            tools:text="@string/sliding_day" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

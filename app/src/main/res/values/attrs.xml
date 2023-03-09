@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SwipeButton">
+        <attr format="boolean" name="is_rtl"/>
+        <attr format="string" name="inner_time"/>
+        <attr format="string" name="inner_date"/>
+        <attr format="string" name="inner_day"/>
+        <attr format="color" name="inner_text_color"/>
+        <attr format="dimension" name="inner_text_left_padding"/>
+        <attr format="dimension" name="inner_text_right_padding"/>
+        <attr format="dimension" name="inner_text_top_padding"/>
+        <attr format="dimension" name="inner_text_bottom_padding"/>
+        <attr format="reference" name="inner_text_background"/>
+        <attr format="dimension" name="button_image_width"/>
+        <attr format="dimension" name="button_image_height"/>
+        <attr format="boolean" name="button_trail_enabled"/>
+        <attr format="reference" name="button_trail_drawable"/>
+        <attr format="reference" name="background_color"/>
+        <attr format="reference" name="background_swipe_color"/>
+        <attr format="string" name="text_sliding"/>
+        <attr format="string" name="text_sliding_swipe"/>
+        <attr format="reference" name="drawable_sliding_swipe"/>
+        <attr format="dimension" name="button_left_padding"/>
+        <attr format="dimension" name="button_right_padding"/>
+        <attr format="dimension" name="button_top_padding"/>
+        <attr format="dimension" name="button_bottom_padding"/>
+        <attr format="reference" name="button_background"/>
+        <attr format="boolean" name="has_activate_state"/>
+        <attr format="enum" name="initial_state">
+            <enum name="enabled" value="0"/>
+            <enum name="disabled" value="1"/>
+        </attr></declare-styleable>
+
+</resources>

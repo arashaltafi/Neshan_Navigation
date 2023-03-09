@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+        <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">12dp</item>
+        </style>
+
+        <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">12dp</item>
+        </style>
+
+        <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">12dp</item>
+        </style>
+
+        <!--background-->
+        <style name="sha.bg.bottomRounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSizeBottomRight">50%</item>
+            <item name="cornerSizeBottomLeft">50%</item>
+            <item name="cornerSizeTopRight">0%</item>
+            <item name="cornerSizeTopLeft">0%</item>
+        </style>
+
+        <style name="appearance.top.round.card" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSizeTopRight">24dp</item>
+            <item name="cornerSizeTopLeft">24dp</item>
+        </style>
+
+        <style name="appearance.round.constant" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSizeTopRight">24dp</item>
+            <item name="cornerSizeTopLeft">24dp</item>
+            <item name="cornerSizeBottomLeft">24dp</item>
+            <item name="cornerSizeBottomRight">24dp</item>
+        </style>
+
+        <style name="appearance.round.50" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">50%</item>
+        </style>
+
+        <style name="appearance.round.5" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">5%</item>
+        </style>
+
+        <style name="appearance.round.10" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">10%</item>
+        </style>
+
+        <style name="appearance.round.10.dp" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">10dp</item>
+        </style>
+
+        <style name="appearance.round.15" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">15%</item>
+        </style>
+
+
+        <style name="appearance.round.25" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">12dp</item>
+        </style>
+
+        <style name="appearance.round.35" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">35%</item>
+        </style>
+
+        <style name="appearance.round.30" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">30%</item>
+        </style>
+        <!--background-->
+
+    <!--background-->
+
+<!--  text-->
+
+<style name="txt.family" parent="">
+    <item name="android:fontFamily">@font/font_family</item>
+    <item name="fontFamily">@font/font_family</item>
+</style>
+
+<!-- normal -->
+
+<style name="txt.h00" parent="txt.family">
+    <item name="android:textSize">11sp</item>
+    <item name="fontWeight">200</item>
+    <item name="android:textFontWeight" tools:targetApi="p">200</item>
+</style>
+
+<style name="txt.h0" parent="txt.family">
+    <item name="android:textSize">12sp</item>
+    <item name="fontWeight">200</item>
+    <item name="android:textFontWeight" tools:targetApi="p">200</item>
+</style>
+
+<style name="txt.h1" parent="txt.family">
+    <item name="android:textSize">14sp</item>
+    <item name="fontWeight">200</item>
+    <item name="android:textFontWeight" tools:targetApi="p">200</item>
+</style>
+
+<style name="txt.h2" parent="txt.family">
+    <item name="android:textSize">16sp</item>
+    <item name="fontWeight">200</item>
+    <item name="android:textFontWeight" tools:targetApi="p">200</item>
+</style>
+
+<style name="txt.h3" parent="txt.family">
+    <item name="android:textSize">18sp</item>
+    <item name="fontWeight">200</item>
+    <item name="android:textFontWeight" tools:targetApi="p">200</item>
+</style>
+
+<style name="txt.h4" parent="txt.family">
+    <item name="android:textSize">22sp</item>
+    <item name="fontWeight">200</item>
+    <item name="android:textFontWeight" tools:targetApi="p">200</item>
+</style>
+
+<!-- light -->
+
+<style name="txt.h00.light" parent="txt.h00">
+    <item name="android:textFontWeight" tools:targetApi="p">100</item>
+</style>
+
+<style name="txt.h0.light" parent="txt.h0">
+    <item name="android:textFontWeight" tools:targetApi="p">100</item>
+</style>
+
+<style name="txt.h1.light" parent="txt.h1">
+    <item name="android:textFontWeight" tools:targetApi="p">100</item>
+</style>
+
+<style name="txt.h5" parent="txt.family">
+    <item name="android:textSize">24sp</item>
+    <item name="fontWeight">200</item>
+</style>
+
+<!-- medium / bold-->
+
+<style name="txt.h00.medium" parent="txt.h00">
+    <item name="fontWeight">400</item>
+    <item name="android:textFontWeight" tools:targetApi="p">400</item>
+</style>
+
+<style name="txt.h0.medium" parent="txt.h0">
+    <item name="fontWeight">400</item>
+    <item name="android:textFontWeight" tools:targetApi="p">400</item>
+</style>
+
+<style name="txt.h1.medium" parent="txt.h1">
+    <item name="fontWeight">400</item>
+    <item name="android:textFontWeight" tools:targetApi="p">400</item>
+</style>
+
+<style name="txt.h00.bold" parent="txt.h00">
+    <item name="fontWeight">700</item>
+    <item name="android:textFontWeight" tools:targetApi="p">700</item>
+</style>
+
+<style name="txt.h0.bold" parent="txt.h0">
+    <item name="fontWeight">700</item>
+    <item name="android:textFontWeight" tools:targetApi="p">700</item>
+</style>
+
+<style name="txt.h1.bold" parent="txt.h1">
+    <item name="fontWeight">700</item>
+    <item name="android:textFontWeight" tools:targetApi="p">700</item>
+</style>
+
+<style name="txt.h2.medium" parent="txt.h2">
+    <item name="fontWeight">400</item>
+    <item name="android:textFontWeight" tools:targetApi="p">400</item>
+</style>
+
+<style name="txt.h2.bold" parent="txt.h2">
+    <item name="fontWeight">700</item>
+    <item name="android:textFontWeight" tools:targetApi="p">700</item>
+</style>
+
+<style name="txt.h3.medium" parent="txt.h3">
+    <item name="fontWeight">400</item>
+    <item name="android:textFontWeight" tools:targetApi="p">400</item>
+</style>
+
+<style name="txt.h3.bold" parent="txt.h3">
+    <item name="fontWeight">700</item>
+    <item name="android:textFontWeight" tools:targetApi="p">700</item>
+</style>
+
+<style name="txt.h4.medium" parent="txt.h4">
+    <item name="fontWeight">400</item>
+    <item name="android:textFontWeight" tools:targetApi="p">400</item>
+</style>
+
+<style name="txt.h4.bold" parent="txt.h4">
+    <item name="fontWeight">700</item>
+    <item name="android:textFontWeight" tools:targetApi="p">700</item>
+</style>
+
+<style name="txt.h5.medium" parent="txt.h5">
+    <item name="fontWeight">400</item>
+</style>
+
+<style name="txt.h5.bold" parent="txt.h5">
+    <item name="fontWeight">700</item>
+</style>
+
+<style name="txt.title" parent="txt.h3">
+    <item name="android:textColor">?colorOnPrimary</item>
+</style>
+
+<style name="txt.desc" parent="txt.h2">
+    <item name="android:textColor">?colorOnPrimary</item>
+</style>
+
+<!--button-->
+
+<style name="btn.colored" parent="Widget.MaterialComponents.Button">
+    <item name="fontWeight">700</item>
+    <item name="android:layout_height">55dp</item>
+    <item name="shapeAppearance">@style/appearance.round.35</item>
+    <item name="android:textAppearance">@style/txt.h2.bold</item>
+</style>
+
+<style name="btn.colored.big" parent="Widget.MaterialComponents.Button">
+    <item name="fontWeight">700</item>
+    <item name="shapeAppearance">@style/appearance.round.35</item>
+    <item name="android:layout_height">62dp</item>
+    <item name="android:textAppearance">@style/txt.h4.bold</item>
+</style>
+
+<style name="btn.outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <item name="fontWeight">700</item>
+    <item name="android:layout_height">62dp</item>
+    <item name="shapeAppearance">@style/appearance.round.35</item>
+    <item name="android:textAppearance">@style/txt.h2.bold</item>
+</style>
+
+<style name="btn.text" parent="Widget.MaterialComponents.Button.TextButton">
+    <item name="fontWeight">700</item>
+    <item name="shapeAppearance">@style/appearance.round.35</item>
+    <item name="android:textAppearance">@style/txt.h1.bold</item>
+</style>
+
+<style name="btn.circle" parent="Widget.MaterialComponents.Button">
+    <item name="shapeAppearance">@style/appearance.round.50</item>
+    <item name="android:textAppearance">@style/txt.h4.medium</item>
+    <item name="fontWeight">700</item>
+    <item name="backgroundTint">?attr/colorSurface</item>
+    <item name="android:textColor">?colorPrimary</item>
+    <item name="android:layout_margin">8dp</item>
+    <item name="android:insetLeft">0dp</item>
+    <item name="android:insetRight">0dp</item>
+    <item name="android:insetTop">0dp</item>
+    <item name="android:insetBottom">0dp</item>
+</style>
+
+<style name="fab.keyboard" parent="Widget.MaterialComponents.FloatingActionButton">
+    <item name="backgroundTint">?attr/colorSurface</item>
+    <item name="tint">?colorPrimary</item>
+    <item name="android:tint">?colorPrimary</item>
+    <item name="elevation">2dp</item>
+    <item name="android:layout_margin">8dp</item>
+    <item name="fabCustomSize">64dp</item>
+    <item name="fabSize">normal</item>
+    <item name="maxImageSize">25dp</item>
+</style>
+
+<style name="fab.small" parent="Widget.MaterialComponents.FloatingActionButton">
+    <item name="tint">?colorPrimary</item>
+    <item name="android:tint">?colorPrimary</item>
+    <item name="elevation">1dp</item>
+    <item name="android:layout_margin">0dp</item>
+    <item name="fabCustomSize">30dp</item>
+    <item name="fabSize">mini</item>
+    <item name="maxImageSize">25dp</item>
+</style>
+
+<style name="fab.mini" parent="Widget.MaterialComponents.FloatingActionButton">
+    <item name="tint">?colorOnSurface</item>
+    <item name="android:tint">?colorOnSurface</item>
+    <item name="elevation">4dp</item>
+    <item name="fabSize">mini</item>
+    <item name="maxImageSize">16dp</item>
+</style>
+
+<style name="fab.normal" parent="Widget.MaterialComponents.FloatingActionButton">
+    <item name="tint">?colorOnSurface</item>
+    <item name="android:tint">?colorOnSurface</item>
+    <item name="elevation">4dp</item>
+    <item name="fabSize">normal</item>
+</style>
+
+<style name="fab.normal_color" parent="Widget.MaterialComponents.FloatingActionButton">
+    <item name="tint">?colorPrimary</item>
+    <item name="android:tint">?colorPrimary</item>
+    <item name="elevation">4dp</item>
+    <item name="fabSize">normal</item>
+</style>
+
+<!--button-->
+
+<style name="titleToolbar" parent="Widget.MaterialComponents.TextView">
+    <item name="maxLines">1</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:textAppearance">@style/txt.h3.bold</item>
+    <item name="android:lines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:gravity">center_vertical</item>
+</style>
+
+<style name="ivToolbar">
+    <item name="shapeAppearance">@style/appearance.round.30</item>
+    <item name="strokeColor">?android:textColorHint</item>
+    <item name="android:padding">5dp</item>
+    <item name="strokeWidth">1dp</item>
+    <item name="android:background">?selectableItemBackground</item>
+    <item name="android:elevation">0dp</item>
+</style>
+
+<style name="ivToolbarMenu">
+    <item name="contentPadding">10dp</item>
+    <item name="android:background">?selectableItemBackground</item>
+    <item name="android:elevation">0dp</item>
+</style>
+
+
+<style name="loading">
+    <!-- Fill the screen -->
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowNoTitle">true</item>
+
+    <item name="android:windowIsTranslucent">true</item>
+
+    <item name="windowMinWidthMajor">0%</item>
+    <item name="windowMinWidthMinor">0%</item>
+</style>
+
+<style name="location">
+    <!-- Fill the screen -->
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowNoTitle">true</item>
+
+    <item name="android:windowIsTranslucent">true</item>
+
+    <item name="windowMinWidthMajor">80%</item>
+    <item name="windowMinWidthMinor">80%</item>
+</style>
+
+<style name="AVLoadingIndicatorView.Medium">
+    <item name="minWidth">36dip</item>
+    <item name="maxWidth">36dip</item>
+    <item name="minHeight">36dip</item>
+    <item name="maxHeight">36dip</item>
+    <item name="indicatorName">BallPulseIndicator</item>
+</style>
+
+
+<!--	text input-->
+<style name="input.outline" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <item name="hintTextAppearance">@style/txt.h1.bold</item>
+    <item name="shapeAppearance">@style/appearance.round.25</item>
+    <item name="errorIconDrawable">@null</item>
+</style>
+
+<style name="input.outline.menu" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+    <item name="hintTextAppearance">@style/txt.h4</item>
+</style>
+
+<!--    chip-->
+<style name="chip.filter" parent="Widget.MaterialComponents.Chip.Filter">
+    <item name="android:textColor">?android:textColorHint</item>
+    <item name="checkedIconEnabled">false</item>
+    <item name="chipBackgroundColor">?android:textColorHint</item>
+    <item name="chipCornerRadius">12dp</item>
+    <item name="android:checkable">false</item>
+    <item name="chipEndPadding">20dp</item>
+    <item name="chipMinTouchTargetSize">0dp</item>
+    <item name="chipStartPadding">20dp</item>
+    <item name="closeIconEnabled">true</item>
+    <item name="closeIconVisible">true</item>
+    <item name="android:textAppearance">@style/txt.h1.medium</item>
+    <item name="closeIconSize">24dp</item>
+</style>
+
+<style name="chip.selectable" parent="Widget.MaterialComponents.Chip.Action">
+    <item name="checkedIconVisible">false</item>
+    <item name="chipCornerRadius">12dp</item>
+    <item name="android:textAppearance">@style/txt.h0.bold</item>
+    <item name="closeIconSize">24dp</item>
+    <item name="chipEndPadding">8dp</item>
+    <item name="chipStartPadding">8dp</item>
+</style>
+
+<style name="chip.checkable" parent="Widget.MaterialComponents.Chip.Filter">
+    <item name="checkedIconVisible">true</item>
+    <item name="chipCornerRadius">12dp</item>
+    <item name="android:textAppearance">@style/txt.h0.bold</item>
+    <item name="closeIconSize">24dp</item>
+    <item name="chipEndPadding">8dp</item>
+    <item name="chipStartPadding">8dp</item>
+</style>
+
+<!--    card view-->
+<style name="card.round" parent="Widget.MaterialComponents.CardView">
+    <item name="cardCornerRadius">12dp</item>
+</style>
+
+<style name="card.round.newsDetail" parent="Widget.MaterialComponents.CardView">
+    <item name="cardCornerRadius">24dp</item>
+    <item name="cardElevation">0dp</item>
+    <!--fixme: don't set elevation, because [webview.loadDataWithBaseURL] render issue-->
+    <item name="strokeWidth">0dp</item>
+</style>
+
+<style name="card.outline.round" parent="Widget.MaterialComponents.CardView">
+    <item name="cardCornerRadius">12dp</item>
+    <item name="cardElevation">0dp</item>
+    <item name="strokeWidth">0dp</item>
+</style>
+
+<style name="card.settings" parent="Widget.MaterialComponents.CardView">
+    <item name="cardCornerRadius">12dp</item>
+    <item name="cardElevation">2dp</item>
+    <item name="strokeWidth">0dp</item>
+    <item name="android:layout_marginTop">5dp</item>
+    <item name="android:layout_marginBottom">5dp</item>
+    <item name="contentPadding">8dp</item>
+</style>
+
+<style name="card.top.round" parent="Widget.MaterialComponents.CardView">
+    <item name="shapeAppearance">@style/appearance.top.round.card</item>
+    <item name="strokeColor">?android:textColorHint</item>
+    <item name="cardElevation">0dp</item>
+</style>
+
+<style name="card.round.selectable.input" parent="Widget.MaterialComponents.CardView">
+    <item name="cardCornerRadius">16dp</item>
+    <item name="strokeColor">?colorPrimary</item>
+    <item name="strokeWidth">2dp</item>
+    <item name="cardElevation">0dp</item>
+    <item name="android:background">?selectableItemBackground</item>
+</style>
+
+<style name="shi.outline.rounded" parent="">
+    <item name="shapeAppearance">@style/appearance.round.25</item>
+    <item name="strokeColor">?android:textColorHint</item>
+    <item name="android:padding">0.5dp</item>
+    <item name="strokeWidth">1dp</item>
+    <item name="android:background">?selectableItemBackground</item>
+    <item name="android:elevation">0dp</item>
+</style>
+
+<style name="shi.outline.profile" parent="Widget.MaterialComponents.CardView">
+    <item name="shapeAppearance">@style/appearance.round.50</item>
+    <item name="strokeColor">?android:textColorHint</item>
+    <item name="android:padding">1dp</item>
+    <item name="strokeWidth">1dp</item>
+</style>
+
+<!--edit text-->
+<style name="edt" parent="">
+    <item name="android:textColor">?android:textColor</item>
+    <item name="android:textDirection">anyRtl</item>
+</style>
+
+<style name="edt.latin.digits" parent="edt">
+    <item name="fontFamily">@font/font_normal_latin_digits</item>
+</style>
+
+<!--    animation-->
+<style name="animation.slide.up_down" parent="">
+</style>
+
+<style name="animation.fade" parent="">
+    <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+    <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+</style>
+
+<style name="animation.popup_window" parent="">
+</style>
+
+</resources>

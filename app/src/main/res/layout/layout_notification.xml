@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:gravity="center_vertical"
+    android:id="@+id/container"
+    android:paddingHorizontal="@dimen/margin_20"
+    android:paddingVertical="@dimen/margin_15">
+
+    <TextView
+        android:id="@+id/exit"
+        style="@style/font_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height_33"
+        android:background="@drawable/bg_radius_red_25"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_white_radius_15"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/margin_30"
+        android:text="@string/exit"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_12"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@style/font_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingHorizontal="@dimen/margin_20"
+        android:text="@string/notification_text"
+        android:textColor="@color/colorGrayDarker"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="@dimen/icon_size_25"
+        android:layout_height="@dimen/icon_size_25"
+        android:src="@drawable/ic_app_logo" />
+
+</LinearLayout>

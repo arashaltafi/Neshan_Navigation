@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.neshan.mapsdk.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/font_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height_45"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@drawable/bg_radius_white"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/margin_30"
+        android:text="@string/move_map_and_choose_location"
+        android:textColor="@color/colorGrayDarker"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mapCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/mapview"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintTop_toTopOf="@id/mapview" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/locationMarker"
+        android:layout_width="@dimen/icon_size_40"
+        android:layout_height="@dimen/icon_size_40"
+        android:src="@drawable/ic_location_marker"
+        app:layout_constraintBottom_toTopOf="@id/mapCenter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet"
+        android:padding="@dimen/margin_20"
+        app:constraint_referenced_ids="confirm,back"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/button_height_45"
+        android:layout_height="@dimen/button_height_45"
+        android:layout_margin="@dimen/margin_20"
+        android:background="@drawable/btn_gray_light"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/margin_10"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/location"
+        android:layout_width="@dimen/button_height_45"
+        android:layout_height="@dimen/button_height_45"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:background="@drawable/btn_gray_light"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/margin_10"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/back"
+        app:srcCompat="@drawable/ic_location" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/confirm"
+        style="@style/font_medium"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_45"
+        android:layout_margin="@dimen/margin_20"
+        android:background="@drawable/bg_radius_primary_15"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_white_radius_15"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/location"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

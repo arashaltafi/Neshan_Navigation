@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Neshan Test</string>
+    <string name="choose_destination">کجا میخوای بری؟</string>
+    <string name="route">بزن بریم</string>
+    <string name="reached_destination">به مقصد رسیدید</string>
+    <string name="confirm">تایید</string>
+    <string name="move_map_and_choose_location">برای انتخاب، نقشه را تکان دهید</string>
+
+    <string name="notification_channel_id" translatable="false">neshan_notification_channel</string>
+    <string name="preference_file_key" translatable="false">org.neshan.PREFERENCE_FILE_KEY</string>
+    <string name="title_map" translatable="false">Map Fragment</string>
+    <string name="title_choose_location" translatable="false">Choose Location Fragment</string>
+
+    <!-- Location Strings -->
+    <string name="main_activity_class_name" translatable="false">org.neshan.main.MainActivity</string>
+    <string name="no_location_text">مکان یافت نشد</string>
+    <string name="permission_rationale">عملکرد صحیح برنامه نیازمند دسترسی به مکان یاب است</string>
+    <string name="permission_denied_explanation">جهت عملکرد بهتر برنامه دسترسی به مکان یاب نیاز است</string>
+    <string name="settings">تنظیمات</string>
+    <string name="ok">تایید</string>
+
+    <string name="distance">فاصله تا مقصد</string>
+    <string name="duration">زمان رسیدن</string>
+    <string name="stop">پایان</string>
+    <string name="exit">خروج</string>
+    <string name="notification_text">نقشه و مسیریاب نشان</string>
+
+
+    <string name="sliding_login">ورود</string>
+    <string name="sliding_logout">خروج</string>
+    <string name="sliding_swipe_left">به چپ بکشید</string>
+    <string name="sliding_swipe_right">به راست بکشید</string>
+    <string name="sliding_time">14:10:54</string>
+    <string name="sliding_day">دوشنبه</string>
+    <string name="sliding_date">1400/11/11</string>
+    <string name="login_roll_call">ورود:</string>
+    <string name="logout_roll_call">خروج:</string>
+    <string name="sum_traffic">جمع حضور: </string>
+    <string name="hour_traffic">%s ساعت و %s دقیقه</string>
+    <string name="traffic_list">لیست ترددها</string>
+    <string name="authorized_places_traffic">مکان‌های مجاز تردد</string>
+    <string name="select_allowed_location">انتخاب مکان برای ثبت تردد</string>
+    <string name="permission_gps_message">برنامه برای ثبت ورود و خروج (تردد) نیاز به دسترسی به موقعیت مکانی شما دارد.</string>
+    <string name="permission_camera_message">برنامه برای خواندن بارکد نیاز به دسترسی به دوربین شما دارد.</string>
+    <string name="permission_contact_message">برای استفاده از این قابلیت برنامه نیاز به دسترسی به مخاطبان شما دارد.</string>
+    <string name="confirm_login">آیا برای ثبت ورود اطمینان دارید؟</string>
+    <string name="confirm_logout">آیا برای ثبت خروج اطمینان دارید؟</string>
+    <string name="traffic_to">تا</string>
+    <string name="select_time_range">انتخاب محدوده</string>
+    <string name="traffic_from">از</string>
+    <string name="receiving_user_location">در حال دریافت موقعیت مکانی شما</string>
+    <string name="help">راهنما</string>
+    <string name="empty_time">00:00</string>
+
+    <string name="poorـaccuracy">در جستجوی موقعیت دقیق مکانی - موقعیت فعلی شما تقریبی است.</string>
+
+
+</resources>

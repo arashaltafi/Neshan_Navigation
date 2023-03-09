@@ -1,0 +1,11 @@
+<resources>
+    <string name="start_point_not_selected">مبدا به درستی انتخاب نشده، دسترسی مکان یاب را بررسی کنید</string>
+    <string name="end_point_not_selected">مقصد به درستی انتخاب نشده</string>
+    <string name="routing_failure">خطا در مسیر یابی</string>
+    <string name="navigation_failure">بروز خطا در مسیریابی</string>
+
+    <string name="network_connection_error">دسترسی به اینترنت را بررسی کنید</string>
+    <string name="connection_timeout_error">دسترسی به اینترنت را بررسی کنید</string>
+    <string name="unknown_server_error">خطای سرور</string>
+    <string name="unknown_error">خطای غیر منتظره رخ داده</string>
+</resources>

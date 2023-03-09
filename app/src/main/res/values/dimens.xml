@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_padding">24dp</dimen>
+
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">14sp</dimen>
+
+    <dimen name="radius_15">15dp</dimen>
+    <dimen name="radius_25">25dp</dimen>
+
+    <dimen name="icon_size_20">20dp</dimen>
+    <dimen name="icon_size_25">25dp</dimen>
+    <dimen name="icon_size_35">35dp</dimen>
+    <dimen name="icon_size_40">40dp</dimen>
+
+    <dimen name="button_height_33">33dp</dimen>
+    <dimen name="button_height_40">40dp</dimen>
+    <dimen name="button_height_45">45dp</dimen>
+
+    <dimen name="bottom_sheet_anchor_width">60dp</dimen>
+    <dimen name="bottom_sheet_anchor_height">4dp</dimen>
+</resources>

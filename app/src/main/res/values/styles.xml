@@ -1,0 +1,25 @@
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/dana_fa_num_medium</item>
+        <item name="colorControlHighlight">@color/colorBlackDim15</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="font_medium">
+        <item name="android:fontFamily">@font/dana_fa_num_medium</item>
+        <item name="fontFamily">@font/dana_fa_num_medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+</resources>
