@@ -12,7 +12,6 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
-import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
@@ -40,8 +39,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import org.neshan.common.model.LatLng
 import org.neshan.common.model.LatLngBounds
-import com.arash.neshan.test2.component.util.showError
-import com.arash.neshan.test2.component.util.toBitmap
 import com.arash.neshan.test2.data.network.Result
 import org.neshan.mapsdk.model.Circle
 import org.neshan.mapsdk.model.Marker
@@ -346,6 +343,7 @@ class MainActivity : AppCompatActivity(), LocationListener {
                 mBinding.loading.toGone()
 
                 // show location detail bottom sheet
+                bottomSheet.getMapStyle(mBinding.mapview.mapStyle)
                 bottomSheet.show(supportFragmentManager, "LocationDetail")
                 bottomSheet.setOnDismissListener {
                     clearMapObjects()
@@ -468,7 +466,9 @@ class MainActivity : AppCompatActivity(), LocationListener {
         }
         mBinding.chooseLocation.setOnClickListener {
             // open Choose Location Activity to choose destination location
-            mStartChooseLocationForResult.launch(Intent(this, ChooseLocationActivity::class.java))
+            val intent = Intent(this, ChooseLocationActivity::class.java)
+            intent.putExtra("MAP_STYLE", mBinding.mapview.mapStyle)
+            mStartChooseLocationForResult.launch(intent)
         }
 
         mBinding.mapview.setOnMarkerLongClickListener {

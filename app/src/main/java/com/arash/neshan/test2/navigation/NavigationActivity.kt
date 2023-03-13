@@ -28,6 +28,8 @@ import com.arash.neshan.test2.data.model.response.Step
 import com.arash.neshan.test2.data.util.EventObserver
 import com.arash.neshan.test2.databinding.ActivityNavigationBinding
 import com.arash.neshan.test2.utils.distanceInMeter
+import com.arash.neshan.test2.utils.toGone
+import com.arash.neshan.test2.utils.toShow
 import com.carto.graphics.Color
 import com.carto.styles.LineStyle
 import com.carto.styles.LineStyleBuilder
@@ -41,6 +43,7 @@ import kotlinx.coroutines.launch
 import org.neshan.common.model.LatLng
 import org.neshan.mapsdk.model.Marker
 import org.neshan.mapsdk.model.Polyline
+import kotlin.math.roundToInt
 
 @AndroidEntryPoint
 class NavigationActivity : AppCompatActivity(), LocationListener {
@@ -77,6 +80,10 @@ class NavigationActivity : AppCompatActivity(), LocationListener {
 
         mBinding.mapview.isTrafficEnabled = true
         mBinding.mapview.isPoiEnabled = true
+
+        intent.getIntExtra("MAP_STYLE", 1).let {
+            mBinding.mapview.mapStyle = it
+        }
 
         mViewModel = ViewModelProvider(this)[NavigationViewModel::class.java]
         mBinding.vm = mViewModel
@@ -118,6 +125,17 @@ class NavigationActivity : AppCompatActivity(), LocationListener {
                         i
                     )
                 )
+            }
+
+            mBinding.apply {
+                if (location.speed > 0)
+                    cvSpeed.toShow()
+                else
+                    cvSpeed.toGone()
+
+                tvSpeed.text = location.speed.roundToInt().toString()
+
+                Log.i("test123321", "location.speed: ${location.speed}")
             }
 
             mBinding.distance.text = it.distance.text

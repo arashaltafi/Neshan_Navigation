@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:maxLines="1"
-                android:textSize="14sp"
+                style="@style/txt.h0"
                 tools:text="فاصله تا میدان انقلاب" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:maxLines="1"
-                android:textSize="12sp"
+                style="@style/txt.h00"
                 tools:text="50 متر" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -93,8 +93,8 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvSpeed"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_margin="8dp"
         android:clipToPadding="false"
         android:visibility="gone"

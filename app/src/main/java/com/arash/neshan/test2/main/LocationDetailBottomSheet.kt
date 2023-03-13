@@ -22,6 +22,11 @@ import java.util.*
 class LocationDetailBottomSheet : BottomSheetDialogFragment() {
     private var mBinding: BottomsheetLocationDetailBinding? = null
     private var mSharedViewModel: MainViewModel? = null
+    private var mapStyle: Int = 1
+
+    fun getMapStyle(mapStyle: Int) {
+        this.mapStyle = mapStyle
+    }
 
     // trigger action when bottom sheet closes
     private var mOnDismissListener: DialogInterface.OnDismissListener? = null
@@ -109,6 +114,7 @@ class LocationDetailBottomSheet : BottomSheetDialogFragment() {
             )
             intent.putExtra(NavigationActivity.EXTRA_START_POINT, startPoint)
             intent.putExtra(NavigationActivity.EXTRA_END_POINT, endPoint)
+            intent.putExtra("MAP_STYLE", mapStyle)
             startActivity(intent)
         }
     }

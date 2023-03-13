@@ -40,6 +40,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvSpeed"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="8dp"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            app:cardElevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address"
+            app:shapeAppearance="@style/appearance.round.50"
+            app:strokeColor="@color/colorRed"
+            app:strokeWidth="3dp"
+            tools:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSpeed"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/txt.h3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="4dp"
+                android:padding="4dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
         <androidx.constraintlayout.helper.widget.Layer
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -51,6 +51,10 @@ class ChooseLocationActivity : AppCompatActivity(), LocationListener {
         setViewListeners()
 
         setUpLocationManager()
+
+        intent.getIntExtra("MAP_STYLE", 1).let {
+            mBinding.mapview.mapStyle = it
+        }
     }
 
     override fun onLastLocation(location: Location) {
