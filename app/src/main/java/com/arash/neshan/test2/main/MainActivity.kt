@@ -248,7 +248,7 @@ class MainActivity : AppCompatActivity(), LocationListener {
         }
 
         mBinding.apply {
-            if (location.speed > 0)
+            if (location.speed.roundToInt() > 0)
                 cvSpeed.toShow()
             else
                 cvSpeed.toGone()
