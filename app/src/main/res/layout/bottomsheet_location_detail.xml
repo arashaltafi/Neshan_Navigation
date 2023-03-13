@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="org.neshan.main.MainViewModel" />
+            type="com.arash.neshan.test2.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

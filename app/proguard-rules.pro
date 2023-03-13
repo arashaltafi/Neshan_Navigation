@@ -45,7 +45,7 @@
 @com.google.gson.annotations.SerializedName <fields>;
 }
 
--keep class org.neshan.data.model.response** { *; }
+-keep class com.arash.neshan.test2.data.model.response** { *; }
 
 -keep class org.neshan.** {*;}
 

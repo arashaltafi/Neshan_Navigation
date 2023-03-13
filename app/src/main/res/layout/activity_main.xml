@@ -270,7 +270,7 @@
 
         </RelativeLayout>
 
-        <org.neshan.utils.SwipeButton
+        <com.arash.neshan.test2.utils.SwipeButton
             android:id="@+id/sbLogin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -296,7 +296,7 @@
             app:text_sliding="ورود"
             app:text_sliding_swipe="به چپ بکشید" />
 
-        <org.neshan.utils.SwipeButton
+        <com.arash.neshan.test2.utils.SwipeButton
             android:id="@+id/sbLogout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
