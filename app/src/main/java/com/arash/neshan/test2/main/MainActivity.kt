@@ -134,8 +134,8 @@ class MainActivity : AppCompatActivity(), LocationListener {
         latLngCircle.add(
             CircleModel(
                 "نهاد رهبری",
-                LatLng(35.71546875429583, 51.39979835801594),
-                20.0
+                LatLng(35.71561627611987, 51.40015092435817),
+                50.0
             )
         )
         latLngCircle.forEach {
@@ -248,6 +248,17 @@ class MainActivity : AppCompatActivity(), LocationListener {
 
         if (location.hasMock()) {
             Toast.makeText(this, "MOCK MOCK MOCK", Toast.LENGTH_SHORT).show()
+        }
+
+        mBinding.apply {
+            if (location.speed > 0)
+                cvSpeed.toShow()
+            else
+                cvSpeed.toGone()
+
+            tvSpeed.text = location.speed.roundToInt().toString()
+
+            Log.i("test123321", "location.speed: ${location.speed}")
         }
 
         if (location.accuracy > 50f)
