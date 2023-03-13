@@ -107,6 +107,21 @@
         app:srcCompat="@drawable/ic_back" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/theme"
+        android:layout_width="@dimen/button_height_45"
+        android:layout_height="@dimen/button_height_45"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_gray_light"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/margin_10"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_nights_stay_24" />
+
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/location"
         android:layout_width="@dimen/button_height_45"
         android:layout_height="@dimen/button_height_45"

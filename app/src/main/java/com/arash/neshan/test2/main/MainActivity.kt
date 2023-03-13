@@ -12,6 +12,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
+import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
@@ -287,7 +288,7 @@ class MainActivity : AppCompatActivity(), LocationListener {
             it.first
         }?.apply {
             mBinding.llDistance.setOnClickListener {
-                focusOnLocation(this.second.latLng, true)
+//                focusOnLocation(this.second.latLng, true)
             }
 
             mBinding.tvDistance.text = "فاصله تا " + this.second.name
@@ -407,22 +408,6 @@ class MainActivity : AppCompatActivity(), LocationListener {
             R.color.colorBlack
         )
 
-        if (isDarkTheme()) {
-            mBinding.apply {
-                mapview.mapStyle = NeshanMapStyle.NESHAN_NIGHT
-                tvDistance.setTextColor(colorWhite)
-                tvDistanceMeter.setTextColor(colorWhite)
-                view.setBackgroundColor(colorWhite)
-            }
-        } else {
-            mBinding.apply {
-                mapview.mapStyle = NeshanMapStyle.NESHAN
-                tvDistance.setTextColor(colorBlack)
-                tvDistanceMeter.setTextColor(colorBlack)
-                view.setBackgroundColor(colorBlack)
-            }
-        }
-
         mBinding.back.setOnClickListener {
             finish()
         }
@@ -432,11 +417,42 @@ class MainActivity : AppCompatActivity(), LocationListener {
                 it
             )
         }
-        mBinding.location.setOnClickListener {
-            if (mViewModel!!.startPoint != null) {
-                focusOnLocation(mViewModel!!.startPoint)
+
+        /*if (mBinding.mapview.mapStyle == NeshanMapStyle.NESHAN) {
+            mBinding.theme.setImageResource(R.drawable.ic_baseline_nights_stay_24)
+        } else {
+            mBinding.theme.setImageResource(R.drawable.ic_baseline_light_mode_24)
+        }*/
+
+        mBinding.theme.setOnClickListener {
+            if (mBinding.mapview.mapStyle == NeshanMapStyle.NESHAN) {
+                mBinding.apply {
+                    changeIconTheme(true)
+                    mapview.mapStyle = NeshanMapStyle.NESHAN_NIGHT
+                    tvDistance.setTextColor(colorWhite)
+                    tvDistanceMeter.setTextColor(colorWhite)
+                    view.setBackgroundColor(colorWhite)
+                }
             } else {
-                mLocationManager!!.startLocationUpdates()
+                mBinding.apply {
+                    changeIconTheme(false)
+                    mapview.mapStyle = NeshanMapStyle.NESHAN
+                    tvDistance.setTextColor(colorBlack)
+                    tvDistanceMeter.setTextColor(colorBlack)
+                    view.setBackgroundColor(colorBlack)
+                }
+            }
+        }
+
+        mBinding.location.setOnClickListener {
+            if (isEnableGps().not())
+                GpsUtils.enableGps(this)
+            else {
+                if (mViewModel!!.startPoint != null) {
+                    focusOnLocation(mViewModel!!.startPoint)
+                } else {
+                    mLocationManager!!.startLocationUpdates()
+                }
             }
         }
         mBinding.chooseLocation.setOnClickListener {
@@ -463,6 +479,15 @@ class MainActivity : AppCompatActivity(), LocationListener {
             focusOnLocation(it.latLng, true)
         }
     }
+
+    private fun changeIconTheme(isNightMode: Boolean) = mBinding.apply {
+        val icon = if (isNightMode) R.drawable.ic_baseline_light_mode_24
+        else R.drawable.ic_baseline_nights_stay_24
+        theme.setImageResource(icon)
+    }
+
+    private fun isEnableGps(): Boolean =
+        GpsUtils.isDisabledGps(this).not()
 
     /**
      * remove destination marker and drawn path for direction
