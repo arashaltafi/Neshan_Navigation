@@ -248,14 +248,16 @@ class MainActivity : AppCompatActivity(), LocationListener {
         }
 
         mBinding.apply {
-            if (location.speed.roundToInt() > 0)
+            val metersPerSecond = location.speed.roundToInt()
+            val kilometersPerHour = metersPerSecond * 3.6
+            if (kilometersPerHour > 0)
                 cvSpeed.toShow()
             else
                 cvSpeed.toGone()
 
-            tvSpeed.text = location.speed.roundToInt().toString()
+            tvSpeed.text = kilometersPerHour.roundToInt().toString()
 
-            Log.i("test123321", "location.speed: ${location.speed}")
+            Log.i("test123321", "kilometersPerHour: $kilometersPerHour")
         }
 
         if (location.accuracy > 50f)
