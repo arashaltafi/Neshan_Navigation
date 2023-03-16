@@ -301,6 +301,8 @@ class MainActivity : AppCompatActivity(), LocationListener {
 //                focusOnLocation(this.second.latLng, true)
             }
 
+            mBinding.view.toShow()
+
             mBinding.tvDistance.text = "فاصله تا " + this.second.name
 
             val d = this.first - this.second.radiusMeter

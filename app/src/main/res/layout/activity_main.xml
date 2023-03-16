@@ -60,7 +60,8 @@
             android:id="@+id/view"
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:background="@color/colorBlack" />
+            android:background="@color/colorBlack"
+            android:visibility="gone" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
@@ -71,20 +72,20 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvDistance"
+                style="@style/txt.h0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:maxLines="1"
-                style="@style/txt.h0"
                 tools:text="فاصله تا میدان انقلاب" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvDistanceMeter"
+                style="@style/txt.h00"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:maxLines="1"
-                style="@style/txt.h00"
                 tools:text="50 متر" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -108,12 +109,12 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvSpeed"
-            android:layout_gravity="center"
-            android:gravity="center"
             style="@style/txt.h3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_marginHorizontal="4dp"
+            android:gravity="center"
             android:padding="4dp" />
 
     </com.google.android.material.card.MaterialCardView>
