@@ -1,8 +1,10 @@
 package com.arash.neshan.test2.utils
 
 import android.app.Activity
+import android.content.Intent
 import android.content.res.Configuration
 import android.location.Location
+import android.net.Uri
 import android.os.Build
 import android.view.View
 
@@ -56,3 +58,28 @@ fun View.toGone() {
 fun View.isGone(): Boolean {
     return this.visibility == View.GONE
 }
+
+
+fun Activity.openGoogleMapNavigation(markerLatitude: Double, markerLongitude: Double) =
+    startActivity(
+        Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("https://www.google.com/maps/dir/?api=1&destination=$markerLatitude,$markerLongitude&travelmode=driving")
+        )
+    )
+
+fun Activity.openNeshanNavigation(markerLatitude: Double, markerLongitude: Double) =
+    startActivity(
+        Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("nshn:$markerLatitude,$markerLongitude")
+        )
+    )
+
+fun Activity.openChooseNavigation(markerLatitude: Double, markerLongitude: Double) =
+    startActivity(
+        Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("geo: $markerLatitude,$markerLongitude")
+        )
+    )

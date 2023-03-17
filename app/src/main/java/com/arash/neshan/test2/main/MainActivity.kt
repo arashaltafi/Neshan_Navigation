@@ -468,6 +468,7 @@ class MainActivity : AppCompatActivity(), LocationListener {
                 }
             }
         }
+
         mBinding.chooseLocation.setOnClickListener {
             // open Choose Location Activity to choose destination location
             val intent = Intent(this, ChooseLocationActivity::class.java)
@@ -492,6 +493,9 @@ class MainActivity : AppCompatActivity(), LocationListener {
 
         mBinding.mapview.setOnMarkerClickListener {
             focusOnLocation(it.latLng, true)
+//            openChooseNavigation(it.latLng.latitude, it.latLng.longitude)
+//            openGoogleMapNavigation(it.latLng.latitude, it.latLng.longitude)
+//            openNeshanNavigation(it.latLng.latitude, it.latLng.longitude)
         }
     }
 
