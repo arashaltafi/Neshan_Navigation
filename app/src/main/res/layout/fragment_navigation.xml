@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.neshan.mapsdk.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/address"
+            style="@style/font_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_radius_red_25"
+            android:gravity="center"
+            android:hint="@string/distance"
+            android:paddingVertical="8dp"
+            android:text="address"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvSpeed"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="8dp"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            app:cardElevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address"
+            app:shapeAppearance="@style/appearance.round.50"
+            app:strokeColor="@color/colorRed"
+            app:strokeWidth="3dp"
+            tools:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSpeed"
+                style="@style/txt.h3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:gravity="center"
+                android:padding="4dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.helper.widget.Layer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_sheet"
+            android:padding="@dimen/margin_20"
+            app:constraint_referenced_ids="stop,durationIcon"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/stop"
+            style="@style/font_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height_40"
+            android:layout_margin="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/bg_radius_red_25"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/margin_30"
+            android:text="@string/stop"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/durationIcon"
+            android:layout_width="@dimen/icon_size_20"
+            android:layout_height="@dimen/icon_size_20"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:src="@drawable/ic_time"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/stop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/stop" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/duration"
+            style="@style/font_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:hint="@string/duration"
+            android:text="duration"
+            android:textColor="@color/colorGrayMedium"
+            android:textColorHint="@color/colorGrayMedium"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/stop"
+            app:layout_constraintEnd_toStartOf="@id/durationIcon"
+            app:layout_constraintTop_toTopOf="@id/stop" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/distanceIcon"
+            android:layout_width="@dimen/icon_size_20"
+            android:layout_height="@dimen/icon_size_20"
+            android:src="@drawable/ic_car"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/stop"
+            app:layout_constraintEnd_toStartOf="@id/durationIcon"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toEndOf="@id/stop"
+            app:layout_constraintTop_toTopOf="@id/stop" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/distance"
+            style="@style/font_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:hint="@string/distance"
+            android:text="distance"
+            android:textColor="@color/colorGrayMedium"
+            android:textColorHint="@color/colorGrayMedium"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/stop"
+            app:layout_constraintEnd_toStartOf="@id/distanceIcon"
+            app:layout_constraintTop_toTopOf="@id/stop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

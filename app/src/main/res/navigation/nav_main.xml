@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.arash.neshan.test2.ui.main.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_chooseLocationFragment"
+            app:destination="@id/chooseLocationFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseLocationFragment"
+        android:name="com.arash.neshan.test2.ui.chooseLocation.ChooseLocationFragment"
+        android:label="fragment_choose_location"
+        tools:layout="@layout/fragment_choose_location">
+        <argument
+            android:name="mapStyle"
+            android:defaultValue="1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.arash.neshan.test2.ui.navigation.NavigationFragment"
+        android:label="NavigationFragment"
+        tools:layout="@layout/fragment_navigation">
+        <argument
+            android:name="mapStyle"
+            android:defaultValue="1"
+            app:argType="integer" />
+        <argument
+            android:name="startPoint"
+            app:argType="com.arash.neshan.test2.domain.model.LatLng"
+            app:nullable="true" />
+        <argument
+            android:name="endPoint"
+            app:argType="com.arash.neshan.test2.domain.model.LatLng"
+            app:nullable="true" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/locationDetailBottomSheet"
+        android:name="com.arash.neshan.test2.ui.main.LocationDetailBottomSheet"
+        android:label="confirmDialogFragment"
+        tools:layout="@layout/bottomsheet_location_detail">
+        <argument
+            android:name="addressResponse"
+            app:argType="com.arash.neshan.test2.domain.model.response.AddressDetailResponse"
+            app:nullable="true" />
+        <argument
+            android:name="routingResponse"
+            app:argType="com.arash.neshan.test2.domain.model.response.RoutingResponse"
+            app:nullable="true" />
+    </dialog>
+
+</navigation>

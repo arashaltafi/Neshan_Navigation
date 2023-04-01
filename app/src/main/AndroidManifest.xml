@@ -21,7 +21,7 @@
         tools:ignore="HardcodedDebugMode"
         tools:replace="android:allowBackup">
         <activity
-            android:name=".main.MainActivity"
+            android:name=".ui.HomeActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="sensorPortrait">
@@ -31,18 +31,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".navigation.NavigationActivity"
-            android:exported="false"
-            android:screenOrientation="sensorPortrait" />
-        <activity
-            android:name=".choose_location.ChooseLocationActivity"
-            android:exported="false"
-            android:screenOrientation="sensorPortrait" />
-
-        <!-- Foreground services in Android 10+ require type. -->
         <service
-            android:name=".component.location.ForegroundLocationService"
+            android:name="com.arash.neshan.test2.utils.location.ForegroundLocationService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="location" />
