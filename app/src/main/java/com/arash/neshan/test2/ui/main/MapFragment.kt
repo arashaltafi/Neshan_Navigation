@@ -133,6 +133,7 @@ class MapFragment : Fragment(), LocationListener {
         latLngCircle.add(
             CircleModel(
                 "میدان آزادی",
+                "متن توضیحات میدان آزادی",
                 LatLng(35.699005714533264, 51.33638524905276),
                 500.0
             )
@@ -140,6 +141,7 @@ class MapFragment : Fragment(), LocationListener {
         latLngCircle.add(
             CircleModel(
                 "میدان انقلاب",
+                "متن توضیحات میدان انقلاب",
                 LatLng(35.70098380940479, 51.39117847652718),
                 100.0
             )
@@ -147,6 +149,7 @@ class MapFragment : Fragment(), LocationListener {
         latLngCircle.add(
             CircleModel(
                 "میدان ولیعصر",
+                "متن توضیحات میدان ولیعصر",
                 LatLng(35.71183652796547, 51.40704216281115),
                 200.0
             )
@@ -154,6 +157,7 @@ class MapFragment : Fragment(), LocationListener {
         latLngCircle.add(
             CircleModel(
                 "نهاد رهبری",
+                "متن توضیحات نهاد رهبری",
                 LatLng(35.71561627611987, 51.40015092435817),
                 50.0
             )
@@ -297,7 +301,7 @@ class MapFragment : Fragment(), LocationListener {
 
                 view.toShow()
 
-                tvDistance.text = "فاصله تا " + this.second.name
+                tvDistance.text = "فاصله تا " + this.second.title
 
                 val d = this.first - this.second.radiusMeter
 
@@ -309,7 +313,7 @@ class MapFragment : Fragment(), LocationListener {
                     if (d > 1000) "$disFinal کیلومتر " else "$disFinal متر "
 
                 tvHint.text =
-                    "فاصله تا " + this.second.name + "\n" + if (d > 1000) "$disFinal کیلومتر " else "$disFinal متر "
+                    "فاصله تا " + this.second.title + "\n" + if (d > 1000) "$disFinal کیلومتر " else "$disFinal متر "
 
                 if (this.first.roundToInt() <= this.second.radiusMeter) {
                     llDistance.toGone()
@@ -370,8 +374,8 @@ class MapFragment : Fragment(), LocationListener {
         val markSt = markStCr.buildStyle()
 
         val marker = Marker(circleModel.latLng, markSt)
-        marker.title = circleModel.name
-        marker.description = circleModel.name + "\n description"
+        marker.title = circleModel.title
+        marker.description = circleModel.description
         return marker
     }
 
@@ -461,9 +465,12 @@ class MapFragment : Fragment(), LocationListener {
             onDestinationSelected(it.latLng)
         }
 
-        mapview.setOnCircleClickListener {
-            Toast.makeText(requireContext(), "test circle ClickListener", Toast.LENGTH_SHORT).show()
-        }
+//        mapview.setOnCircleClickListener {
+//            Toast.makeText(requireContext(), "test circle ClickListener", Toast.LENGTH_SHORT).show()
+//        }
+//        mapview.setOnCircleDoubleClickListener {
+//
+//        }
 
         mapview.setOnCircleLongClickListener {
             mapview.performLongClick()
