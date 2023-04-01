@@ -130,7 +130,6 @@ class NavigationViewModel @Inject constructor(
             var isUserFarFromRoute = false
             try {
                 val s = (currentToNextDistance + currentToUserDistance + nextToUserDistance) / 2
-
                 val area =
                     sqrt(s * (s - currentToNextDistance) * (s - currentToUserDistance) * (s - nextToUserDistance))
                 val userToRouteDistance = 2 * area / currentToNextDistance
@@ -139,14 +138,6 @@ class NavigationViewModel @Inject constructor(
             } catch (e: Exception) {
                 e.printStackTrace()
             }
-
-//            val startPoint = LatLng(mUserLocation!!.latitude, mUserLocation!!.longitude)
-//            loadDirection(
-//                startPoint,
-//                mEndPoint!!,
-//                RoutingType.CAR,
-//                mUserLocation!!.bearing.toInt()
-//            )
 
             // if user has gone far from route or moved backward -> request direction again
             if (isUserFarFromRoute || isUserMovedBackward) {
@@ -193,7 +184,6 @@ class NavigationViewModel @Inject constructor(
                 }
 
             }
-
         }
     }
 
