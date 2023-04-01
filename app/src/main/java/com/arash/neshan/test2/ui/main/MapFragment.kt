@@ -166,6 +166,13 @@ class MapFragment : Fragment(), LocationListener {
 
         mapview.isPoiEnabled = true
         mapview.isTrafficEnabled = true
+
+//        val latLngBounds = LatLngBounds(
+//            LatLng(41.95570991266906, 50.60572931619605),
+//            LatLng(24.062751970294773, 55.76843173696899)
+//        )
+//        val screenBounds = ScreenBounds()
+//        mapview.moveToCameraBounds(latLngBounds, screenBounds, true, 1f)
     }
 
     private fun initialTrafficList() {
@@ -361,7 +368,11 @@ class MapFragment : Fragment(), LocationListener {
                 )
             )
         val markSt = markStCr.buildStyle()
-        return Marker(circleModel.latLng, markSt)
+
+        val marker = Marker(circleModel.latLng, markSt)
+        marker.title = circleModel.name
+        marker.description = circleModel.name + "\n description"
+        return marker
     }
 
     private fun setCircle(circleModel: CircleModel) = binding.apply {
@@ -459,7 +470,8 @@ class MapFragment : Fragment(), LocationListener {
         }
 
         mapview.setOnMarkerClickListener {
-            focusOnLocation(it.latLng, true)
+            it.showInfoWindow()
+//            focusOnLocation(it.latLng, true)
 //            openChooseNavigation(it.latLng.latitude, it.latLng.longitude)
 //            openGoogleMapNavigation(it.latLng.latitude, it.latLng.longitude)
 //            openNeshanNavigation(it.latLng.latitude, it.latLng.longitude)
