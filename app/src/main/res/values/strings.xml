@@ -12,7 +12,7 @@
     <string name="title_choose_location" translatable="false">Choose Location Fragment</string>
 
     <!-- Location Strings -->
-    <string name="main_activity_class_name" translatable="false">org.neshan.main.MainActivity</string>
+    <string name="main_activity_class_name" translatable="false">com/arash/neshan/test2/ui/HomeActivity</string>
     <string name="no_location_text">مکان یافت نشد</string>
     <string name="permission_rationale">عملکرد صحیح برنامه نیازمند دسترسی به مکان یاب است</string>
     <string name="permission_denied_explanation">جهت عملکرد بهتر برنامه دسترسی به مکان یاب نیاز است</string>

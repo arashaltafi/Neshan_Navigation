@@ -13,6 +13,7 @@ import android.util.Log
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.arash.neshan.test2.ui.HomeActivity
 import com.google.android.gms.location.*
 import java.util.concurrent.TimeUnit
 
@@ -288,30 +289,51 @@ class ForegroundLocationService : Service() {
 
         // set up main Intent/Pending Intents for notification.
         val launchActivityIntent =
-            Intent(this, Class.forName(getString(com.arash.neshan.test2.R.string.main_activity_class_name)))
+            Intent(this, HomeActivity::class.java).apply {
+                flags = (Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                action = Intent.ACTION_VIEW
+            }
 
         val cancelIntent = Intent(this, ForegroundLocationService::class.java)
         cancelIntent.putExtra(EXTRA_CANCEL_LOCATION_TRACKING_FROM, true)
 
-        val servicePendingIntent = PendingIntent.getService(
-            this, 0, cancelIntent, PendingIntent.FLAG_IMMUTABLE
-        )
+        val servicePendingIntent: PendingIntent? = cancelIntent.let {
+            PendingIntent.getService(
+                this, 0, cancelIntent,
+                (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    PendingIntent.FLAG_IMMUTABLE
+                else 0x0)
+                        or
+                        PendingIntent.FLAG_UPDATE_CURRENT
+            )
+        }
+        val activityPendingIntent: PendingIntent? = launchActivityIntent.let {
+            PendingIntent.getActivity(
+                this, 0, launchActivityIntent,
+                (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    PendingIntent.FLAG_IMMUTABLE
+                else 0x0)
+                        or
+                        PendingIntent.FLAG_UPDATE_CURRENT
+            )
+        }
 
-        val activityPendingIntent = PendingIntent.getActivity(
-            this, 0, launchActivityIntent, PendingIntent.FLAG_IMMUTABLE
-        )
-
-        // build and issue the notification.
-        // Notification Channel Id is ignored for Android pre O (26).
         val notificationCompatBuilder =
             NotificationCompat.Builder(
                 applicationContext,
                 getString(com.arash.neshan.test2.R.string.notification_channel_id)
             )
 
-        val notificationLayout = RemoteViews(packageName, com.arash.neshan.test2.R.layout.layout_notification)
-        notificationLayout.setOnClickPendingIntent(com.arash.neshan.test2.R.id.exit, servicePendingIntent)
-        notificationLayout.setOnClickPendingIntent(com.arash.neshan.test2.R.id.container, activityPendingIntent)
+        val notificationLayout =
+            RemoteViews(packageName, com.arash.neshan.test2.R.layout.layout_notification)
+        notificationLayout.setOnClickPendingIntent(
+            com.arash.neshan.test2.R.id.exit,
+            servicePendingIntent
+        )
+        notificationLayout.setOnClickPendingIntent(
+            com.arash.neshan.test2.R.id.container,
+            activityPendingIntent
+        )
 
         return notificationCompatBuilder
             .setSmallIcon(com.arash.neshan.test2.R.drawable.ic_app_logo)
