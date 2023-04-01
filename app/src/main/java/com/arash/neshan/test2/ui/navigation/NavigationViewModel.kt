@@ -13,6 +13,7 @@ import com.arash.neshan.test2.domain.repository.NavigationRepository
 import com.arash.neshan.test2.utils.base.BaseViewModel
 import com.arash.neshan.test2.utils.distanceFrom
 import com.arash.neshan.test2.utils.equalsTo
+import com.arash.neshan.test2.utils.getError
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.neshan.common.model.LatLng
 import org.neshan.common.utils.PolylineEncoding
@@ -106,6 +107,7 @@ class NavigationViewModel @Inject constructor(
                     }
                 }
             } catch (e: NullPointerException) {
+                _generalError.postValue(Event(e.getError()))
                 e.printStackTrace()
             }
         }
