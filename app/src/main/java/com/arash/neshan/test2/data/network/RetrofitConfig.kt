@@ -119,7 +119,7 @@ open class RetrofitConfig @Inject constructor() {
     open fun getHeaders(): List<Pair<String, String>>? {
 
         val headers = mutableListOf<Pair<String, String>>()
-        headers.add(Pair("Api-Key", "service.934a1ea696064b40952db4a293efe56d"))
+        headers.add(Pair("Api-Key", "service.*****************"))
 
         return headers
 
