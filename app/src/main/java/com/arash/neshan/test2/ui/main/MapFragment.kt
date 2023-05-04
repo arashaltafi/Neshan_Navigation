@@ -154,14 +154,6 @@ class MapFragment : Fragment(), LocationListener {
                 200.0
             )
         )
-        latLngCircle.add(
-            CircleModel(
-                "نهاد رهبری",
-                "متن توضیحات نهاد رهبری",
-                LatLng(35.71561627611987, 51.40015092435817),
-                50.0
-            )
-        )
 
         latLngCircle.forEach {
             setCircle(it)
